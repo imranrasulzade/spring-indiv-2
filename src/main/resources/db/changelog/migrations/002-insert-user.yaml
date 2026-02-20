@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-insert-user
+      author: imran
+      changes:
+        - insert:
+            tableName: indiv_users
+            columns:
+              - column:
+                  name: username
+                  value: imran
+              - column:
+                  name: email
+                  value: imran@gmail.com
+
+        - insert:
+            tableName: indiv_users
+            columns:
+              - column:
+                  name: username
+                  value: said
+              - column:
+                  name: email
+                  value: said@gmail.com

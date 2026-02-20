@@ -1,0 +1,9 @@
+databaseChangeLog:
+#  - include:
+#      file: db/changelog/migrations/001-create-user-table.yaml
+#
+#  - include:
+#      file: db/changelog/migrations/002-insert-user.yaml
+
+  - includeAll:
+      path: db/changelog/migrations/

@@ -1,0 +1,1 @@
+insert into public.indiv_users(username, email) values ('admin', 'admin');
