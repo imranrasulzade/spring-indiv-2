@@ -15,15 +15,16 @@ public class SwaggerSecurityConfig {
 
         SecurityScheme securityScheme = new SecurityScheme()
                 .type(SecurityScheme.Type.HTTP)
-                .scheme("basic");
+                .scheme("bearer")
+                .bearerFormat("JWT");
 
         return new OpenAPI()
                 .components(
                         new Components()
-                                .addSecuritySchemes("basicAuth", securityScheme)
+                                .addSecuritySchemes("bearerAuth", securityScheme)
                 )
                 .addSecurityItem(
-                        new SecurityRequirement().addList("basicAuth")
+                        new SecurityRequirement().addList("bearerAuth")
                 );
     }
 }
